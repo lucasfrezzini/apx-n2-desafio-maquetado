@@ -1,0 +1,344 @@
+/* Fuentes  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Roboto:wght@400;700&display=swap");
+/* Reseteo  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--roboto);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  max-width: 114rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* Colores y fuentes */
+
+:root {
+  --yellow: rgba(255, 217, 83, 1);
+  --black: rgba(20, 20, 20, 1);
+  --white: rgba(255, 255, 255, 1);
+  --gray: rgba(219, 219, 219, 1);
+  --roboto: "Roboto", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+/* Components */
+h1,
+.title {
+  font-family: var(--open-sans);
+}
+
+h1 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+  padding-block: 6rem;
+}
+
+.subtitle {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+
+.title--white,
+.text--white {
+  color: var(--white);
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+/* Header  */
+
+.header {
+  height: 9rem;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__hamburguer {
+  background-color: transparent;
+  border: none;
+  width: initial;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero {
+  background-image: url("./header-bg.png");
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.hero > .container {
+  display: flex;
+  flex-grow: 1;
+}
+.hero__info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__info h1 {
+  margin-top: 6rem;
+}
+
+.hero__info img {
+  max-width: 75%;
+}
+
+/* Quien soy  */
+
+.quien-soy {
+  background-color: var(--black);
+  text-align: center;
+}
+
+.quien-soy .text {
+  text-align: left;
+}
+.quien-soy img {
+  filter: invert(1);
+  width: 40%;
+  padding: 6rem 0;
+}
+
+/* Mis servicios  */
+
+.servicios {
+  text-align: center;
+}
+
+.servicios__card {
+  margin-bottom: 8rem;
+}
+.servicios__card svg {
+  width: 8rem;
+  height: 8rem;
+  color: #666af6;
+}
+
+/* Contacto  */
+.contacto {
+  background-color: var(--black);
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  resize: none;
+  border-radius: 3px;
+  border: none;
+  height: 4.5rem;
+}
+
+.contacto__fieldset {
+  margin-bottom: 3rem;
+}
+
+.contacto__fieldset label {
+  color: var(--white);
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.contacto__fieldset input,
+.contacto__fieldset textarea {
+  padding: 1rem;
+}
+
+.contacto__fieldset textarea {
+  height: 11.3rem;
+}
+
+.contacto__button {
+  background-color: var(--yellow);
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 100%;
+  margin: 4rem 0 8rem 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.contacto__button:hover {
+  background-color: var(--white);
+  border: 5px solid var(--yellow);
+}
+
+/* Footer  */
+
+.footer {
+  background-color: var(--gray);
+  padding: 5rem 0;
+}
+
+.footer__copy {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.footer__socials {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__socials a {
+  color: var(--black);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials svg {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+/* @Respnsive  */
+
+@media screen and (min-width: 768px) {
+  .header__hamburguer {
+    display: none;
+  }
+
+  .header__menu {
+    display: initial;
+    display: flex;
+    gap: 4rem;
+  }
+  .header__menu a {
+    color: var(--black);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 2.2rem;
+    transition: all 0.3s;
+  }
+  .header__menu a:hover {
+    color: var(--yellow);
+  }
+
+  .hero__info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero__info h1 {
+    max-width: 30%;
+  }
+  .hero__info img {
+    max-width: 50%;
+  }
+
+  .hero__info h1 {
+    text-align: left;
+  }
+
+  .quien-soy > .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-block: 8rem;
+  }
+
+  .quien-soy__data {
+    max-width: 50%;
+  }
+
+  .quien-soy__data .title {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+
+  .quien-soy img {
+    width: 20%;
+    padding: 0;
+  }
+
+  .servicios__cards-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+
+  .contacto > .container {
+    display: flex;
+    justify-content: center;
+    padding-block: 8rem;
+    gap: 8rem;
+  }
+
+  .contacto .title {
+    padding: 0;
+  }
+  .contacto > .container form {
+    max-width: 40rem;
+    flex-grow: 1;
+  }
+
+  .contacto__button {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    /* background-color: #ccc; */
+    background-image: url(./footer-bg.png);
+  }
+
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__socials {
+    padding-top: 0;
+    gap: 2rem;
+  }
+}
